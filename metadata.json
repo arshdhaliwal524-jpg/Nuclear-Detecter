@@ -1,0 +1,8 @@
+{
+  "name": "Aegis: Nuclear Threat Monitor",
+  "description": "A high-stakes simulation dashboard for nuclear threat detection and survival guidance powered by Gemini AI.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone"
+  ]
+}

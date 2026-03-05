@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-aegis-bg: #0a0a0c;
+  --color-aegis-card: #151619;
+  --color-aegis-accent: #ff4444;
+  --color-aegis-text: #ffffff;
+  --color-aegis-muted: #8e9299;
+}
+
+@layer base {
+  body {
+    @apply bg-aegis-bg text-aegis-text font-mono antialiased;
+  }
+}
+
+@keyframes radar-pulse {
+  0% { transform: scale(0.1); opacity: 0.8; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.radar-pulse {
+  animation: radar-pulse 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+@keyframes scan {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.radar-scan {
+  animation: scan 4s linear infinite;
+}
+
+.glass-panel {
+  @apply bg-aegis-card/80 backdrop-blur-md border border-white/10 rounded-xl;
+}
+
+.lcd-text {
+  text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+}
